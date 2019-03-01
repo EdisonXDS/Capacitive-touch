@@ -1,0 +1,55 @@
+void setup() {
+Serial.begin(9600);
+pinMode(12,OUTPUT);
+}
+
+void loop() {
+ int dol=digitalRead(2);
+ int re=digitalRead(3);
+  int mi=digitalRead(4);
+  int fa=digitalRead(5);
+  int so=digitalRead(6);
+  int la=digitalRead(7);
+  int xi=digitalRead(8);
+ if(dol==1) //do
+ {
+  digitalWrite(12,HIGH);
+  tone(12,261,300);
+ }
+ if(re==1)//re
+ {
+  digitalWrite(12,HIGH);
+  tone(12,294,300);
+  
+ } 
+ if(mi==1)//mi
+ {
+  digitalWrite(12,HIGH);
+  tone(12,330,300);
+  
+ }
+  if(fa==1)//fa
+ {
+  digitalWrite(12,HIGH);
+  tone(12,350,300);
+  
+ }
+  if(so==1)//so
+ {
+  digitalWrite(12,HIGH);
+  tone(12,392,300);  
+ }
+//  if(la==1)
+// {
+//  digitalWrite(12,HIGH);
+//  tone(12,440,100);
+//  
+// }
+//  if(xi==1)
+// {
+//  digitalWrite(12,HIGH);
+//  tone(12,494,100);
+//  
+// }
+ delay(500);
+}
